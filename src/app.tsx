@@ -11,6 +11,10 @@ import ContactPage from "./pages/ContactPage";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Events from "./pages/events";
+import Privacy from "./pages/Privacy";
+import Terms from "./pages/Terms";
+import Pricing from "./pages/Pricing";
+import PlanDetail from "./pages/PlanDetail";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +31,11 @@ const App = () => (
           <Route path="/testimonials" element={<TestimonialsPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/events" element={<Events />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/pricing/:id" element={<PlanDetail />} />
           <Route path="/all" element={<Index />} /> {/* Keeping the original Index page as /all for reference */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

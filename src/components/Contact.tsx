@@ -1,12 +1,29 @@
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef,useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Send } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
-
+import axios from "axios";
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    eventType: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    
+    const { id, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [id]: value,
+    }));
+  };
   const sectionRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
@@ -36,6 +53,17 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(formData)
+    axios
+      .post("https://7589cc7bc986161a9bbde04adf22219e.m.pipedream.net", {
+        body: formData,
+      })
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
     toast({
       title: "Message Sent",
       description: "Thank you for contacting us. We'll get back to you shortly!",
@@ -115,6 +143,7 @@ const Contact = () => {
                     placeholder="Your name"
                     className="w-full"
                     required
+                    onChange={handleChange} 
                   />
                 </div>
                 <div>
@@ -127,6 +156,7 @@ const Contact = () => {
                     placeholder="Your email"
                     className="w-full"
                     required
+                    onChange={handleChange} 
                   />
                 </div>
                 <div>
@@ -137,6 +167,7 @@ const Contact = () => {
                     id="phone"
                     placeholder="Your phone"
                     className="w-full"
+                    onChange={handleChange} 
                   />
                 </div>
                 <div>
@@ -144,9 +175,9 @@ const Contact = () => {
                     Event Type
                   </label>
                   <select
-                    id="event-type"
+                    id="eventType"
                     className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                  >
+                    onChange={handleChange} >
                     <option value="">Select an event type</option>
                     <option value="wedding">Wedding</option>
                     <option value="birthday">Birthday</option>
@@ -166,6 +197,7 @@ const Contact = () => {
                   placeholder="Tell us about your event..."
                   className="w-full min-h-[120px]"
                   required
+                  onChange={handleChange} 
                 />
               </div>
               

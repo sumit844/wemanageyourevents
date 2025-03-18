@@ -211,10 +211,13 @@ const featuredEvents = events.slice(0, 3);
               your exceptional event experience.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <Button size="lg" onClick={() => navigate('/contact')}>
+              <Button size="lg" onClick={() => {navigate('/contact')
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}>
                 Contact Us
               </Button>
-              <Button size="lg" variant="outline" onClick={() => navigate('/pricing')}>
+              <Button size="lg" variant="outline" onClick={() => {navigate('/pricing') 
+                window.scrollTo({ top: 0, behavior: "smooth" });}}>
                 View Pricing
               </Button>
             </div>

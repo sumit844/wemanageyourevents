@@ -1,9 +1,20 @@
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Instagram, Facebook, Twitter, Linkedin, Heart } from "lucide-react";
-import { Link } from "react-router-dom";
-
+import { Link, useNavigate } from 'react-router-dom';
 const Footer = () => {
+
+  const navigate = useNavigate();
+  
+  const handleEventTypeClick = (eventType: string) => {
+    navigate('/events');
+    // Use setTimeout to ensure navigation completes before trying to click the button
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    setTimeout(() => {
+      const button = document.querySelector(`button[value="${eventType.toLowerCase()}"]`) as HTMLButtonElement;
+      if (button) button.click();
+    }, 100);
+  };
   return (
     <footer className="bg-gray-900 text-white pt-20 pb-10 px-6 md:px-10">
       <div className="container mx-auto">
@@ -73,36 +84,76 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="font-medium text-lg mb-4">Events</h3>
             <ul className="space-y-2">
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-primary transition-colors">
-                  Wedding Planning
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-primary transition-colors">
-                  Birthday Parties
-                </Link>
-              </li>
-              <li>
-                <Link to="/services" className="text-gray-400 hover:text-primary transition-colors">
+                <Link 
+                  to="/events"
+                  onClick={() => handleEventTypeClick('religious')}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Religious Ceremonies
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-primary transition-colors">
+                <Link 
+                  to="/events"
+                  onClick={() => handleEventTypeClick('wedding')}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Weddings
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/events"
+                  onClick={() => handleEventTypeClick('birthday')}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Birthdays
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/events"
+                  onClick={() => handleEventTypeClick('corporate')}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
                   Corporate Events
                 </Link>
               </li>
               <li>
-                <Link to="/services" className="text-gray-400 hover:text-primary transition-colors">
-                  Catering Services
+                <Link 
+                  to="/events"
+                  onClick={() => handleEventTypeClick('social')}
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Social Gatherings
                 </Link>
               </li>
             </ul>
           </div>
-          
+          <div>
+            <h3 className="font-medium text-lg mb-4">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link 
+                  to="/privacy" 
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/terms" 
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
+          </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
             <p className="text-gray-400 mb-4">

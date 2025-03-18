@@ -28,6 +28,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
+    { name: "Pricing", href: "/pricing" },
     { name: "About", href: "/about" },
     { name: "Testimonials", href: "/testimonials" },
     { name: "Contact", href: "/contact" },
@@ -57,7 +58,7 @@ const Navbar = () => {
             "text-lg md:text-xl font-semibold transition-colors duration-300",
             isScrolled ? "text-primary" : "text-primary"
           )}>
-            wemanageyourevents
+            WeManageYourEvents
           </span>
         </Link>
 
