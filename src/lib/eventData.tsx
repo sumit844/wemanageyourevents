@@ -27,7 +27,7 @@ export const events: Event[] = [
 
       We ensure that all traditions are followed with precision while making the experience comfortable for you and your guests. Our team handles all logistics so you can focus entirely on the spiritual significance of the ceremony.
     `,
-    imageSrc: 'https://images.unsplash.com/photo-1466442929976-97f336a657be?q=80&w=1400&auto=format&fit=crop',
+    imageSrc: '',
     imageAlt: 'Traditional puja ceremony with decorated altar and offerings'
   },
   {
@@ -49,7 +49,7 @@ export const events: Event[] = [
 
       We specialize in organizing community religious events that bring people together for spiritual purposes. Our team ensures that every aspect of the ceremony is handled with respect for tradition while providing a seamless experience for all participants.
     `,
-    imageSrc: 'https://images.unsplash.com/photo-1473177104440-ffee2f376098?q=80&w=1400&auto=format&fit=crop',
+    imageSrc: '',
     imageAlt: 'Sacred space with traditional decorations for religious ceremony'
   },
   {
