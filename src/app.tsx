@@ -20,6 +20,7 @@ import VendorsAndServices from './pages/VendorsAndServices'
 import EventPlanningTips from "./pages/EventPlanningTips";
 import ScrollToTopNew from "./components/ScrollToTopNew";
 import EventDetail from "./pages/EventDetail";
+import FAQ from "./components/FAQ";
 
 const queryClient = new QueryClient();
 
@@ -47,6 +48,7 @@ const App = () => (
           <Route path="/venue-showcase" element={<VenueShowcase />} />
           <Route path="/vendors-and-services" element={<VendorsAndServices />} />
           <Route path="/event-planning-tips" element={<EventPlanningTips />} />
+          <Route path="/faq" element={<FAQ />} />
           <Route path="/all" element={<Index />} /> {/* Keeping the original Index page as /all for reference */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />

@@ -17,37 +17,37 @@ const Footer = () => {
     }, 100);
   };
   return (
-    <footer className="bg-gray-900 text-white pt-20 pb-10 px-6 md:px-10">
+    <footer className="bg-white text-black pt-20 pb-10 px-6 md:px-10">
       <div className="container mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-16 text-black">
           <div>
-            <h3 className="text-xl font-semibold mb-4">wemanageyourevents</h3>
-            <p className="text-gray-400 mb-4">
+            <h3 className="text-xl font-semibold mb-4 text-black">WeManageYourEvents</h3>
+            <p className="text-gray-400 mb-4 text-black">
               Creating perfect memories through flawless events that celebrate
               life's special moments.
             </p>
             <div className="flex space-x-4">
               <a
                 href="#"
-                className="bg-gray-800 hover:bg-primary transition-colors p-2 rounded-full"
+                className="bg-white border border-black hover:bg-primary transition-colors p-2 rounded-full"
               >
                 <Instagram size={18} />
               </a>
               <a
                 href="#"
-                className="bg-gray-800 hover:bg-primary transition-colors p-2 rounded-full"
+                className="bg-white border border-black hover:bg-primary transition-colors p-2 rounded-full"
               >
                 <Facebook size={18} />
               </a>
               <a
                 href="#"
-                className="bg-gray-800 hover:bg-primary transition-colors p-2 rounded-full"
+                className="bg-white border border-black hover:bg-primary transition-colors p-2 rounded-full"
               >
                 <Twitter size={18} />
               </a>
               <a
                 href="#"
-                className="bg-gray-800 hover:bg-primary transition-colors p-2 rounded-full"
+                className="bg-white border border-black hover:bg-primary transition-colors p-2 rounded-full"
               >
                 <Linkedin size={18} />
               </a>
@@ -204,7 +204,7 @@ const Footer = () => {
             <div className="flex space-x-2">
               <Input
                 placeholder="Your email"
-                className="bg-gray-800 border-gray-700 text-white"
+                className="bg-white border-gray-700 text-white"
               />
               <Button className="bg-primary hover:bg-primary/90 text-white shrink-0">
                 Subscribe

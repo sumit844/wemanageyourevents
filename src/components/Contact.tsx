@@ -55,7 +55,7 @@ const Contact = () => {
     e.preventDefault();
     console.log(formData)
     axios
-      .post("https://7589cc7bc986161a9bbde04adf22219e.m.pipedream.net", {
+      .post("https://40abacbbe202b37f1c7b6c7506602c13.m.pipedream.net", {
         body: formData,
       })
       .then((response) => {
@@ -98,13 +98,13 @@ const Contact = () => {
               <div>
                 <h3 className="font-semibold text-lg mb-2">Our Location</h3>
                 <p className="text-gray-600">
-                  123 Event Street, Celebration Tower<br />
-                  Mumbai, Maharashtra 400001
+                  New Ashok Nagar<br />
+                  New Delhi 110096, Delhi, India
                 </p>
               </div>
             </div>
             
-            <div className="glass-card p-6 rounded-xl flex items-start space-x-4">
+            {/* <div className="glass-card p-6 rounded-xl flex items-start space-x-4">
               <div className="bg-primary/10 rounded-full p-3">
                 <Phone className="h-6 w-6 text-primary" />
               </div>
@@ -115,7 +115,7 @@ const Contact = () => {
                   +91 91234 56789
                 </p>
               </div>
-            </div>
+            </div> */}
             
             <div className="glass-card p-6 rounded-xl flex items-start space-x-4">
               <div className="bg-primary/10 rounded-full p-3">
@@ -124,8 +124,7 @@ const Contact = () => {
               <div>
                 <h3 className="font-semibold text-lg mb-2">Email Us</h3>
                 <p className="text-gray-600">
-                  info@wemanageyourevents.com<br />
-                  support@wemanageyourevents.com
+                  wemanageyourevents@gmail.com<br />
                 </p>
               </div>
             </div>

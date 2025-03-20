@@ -55,7 +55,7 @@ const PlanApplicationForm = ({
   const onSubmit = async (data: FormValues) => {
     console.log({ ...data, planId, planTitle });
     axios
-      .post("https://7589cc7bc986161a9bbde04adf22219e.m.pipedream.net", {
+      .post("https://40abacbbe202b37f1c7b6c7506602c13.m.pipedream.net", {
         body: data,
       })
       .then((response) => {
