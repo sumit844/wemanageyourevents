@@ -23,7 +23,7 @@ import EventDetail from "./pages/EventDetail";
 import FAQ from "./components/FAQ";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
-import EventsOnLoan from "./pages/Eventsonloan";
+import EventsOnLoan from "./pages/EventsOnLoanNew";
 
 const queryClient = new QueryClient();
 
