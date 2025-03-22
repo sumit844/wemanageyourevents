@@ -21,6 +21,8 @@ import EventPlanningTips from "./pages/EventPlanningTips";
 import ScrollToTopNew from "./components/ScrollToTopNew";
 import EventDetail from "./pages/EventDetail";
 import FAQ from "./components/FAQ";
+import Blog from "./pages/Blog";
+import BlogDetail from "./pages/BlogDetail";
 
 const queryClient = new QueryClient();
 
@@ -45,6 +47,8 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/pricing/:id" element={<PlanDetail />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:id" element={<BlogDetail />} />
           <Route path="/venue-showcase" element={<VenueShowcase />} />
           <Route path="/vendors-and-services" element={<VendorsAndServices />} />
           <Route path="/event-planning-tips" element={<EventPlanningTips />} />
