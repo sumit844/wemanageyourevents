@@ -26,6 +26,7 @@ const Navbar = () => {
   const mainNavItems = [
     { name: 'Home', path: '/' },
     { name: 'Events', path: '/events' },
+    {name:"Events on Loan", path:'/events-on-loan'},
     { name: 'Pricing', path: '/pricing' },
     { name: 'Resources', key: 'resources', submenu: true },
     { name: 'About', key: 'about', submenu: true },

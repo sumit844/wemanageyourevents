@@ -23,6 +23,7 @@ import EventDetail from "./pages/EventDetail";
 import FAQ from "./components/FAQ";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
+import EventsOnLoan from "./pages/Eventsonloan";
 
 const queryClient = new QueryClient();
 
@@ -52,6 +53,7 @@ const App = () => (
           <Route path="/venue-showcase" element={<VenueShowcase />} />
           <Route path="/vendors-and-services" element={<VendorsAndServices />} />
           <Route path="/event-planning-tips" element={<EventPlanningTips />} />
+          <Route path="/events-on-loan" element={<EventsOnLoan />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/all" element={<Index />} /> {/* Keeping the original Index page as /all for reference */}
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
